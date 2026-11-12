@@ -16,6 +16,11 @@ Standard software random number generators (PRNGs) rely on deterministic algorit
 
 ---
 
+## Hardware Prototype
+
+![Personal TRNG Lab Prototype](prototype_in_lab.jpg)
+*Personal TRNG hardware prototype running in the lab.*
+
 ## Hardware & Related Repositories
 
 * **PCB Design & BOM:** [mixoftix/personal_trng_pcb](https://github.com) (Single-Sided & Double-Sided editions)
