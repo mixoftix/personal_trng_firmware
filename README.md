@@ -18,12 +18,12 @@ Standard software random number generators (PRNGs) rely on deterministic algorit
 
 ## Hardware Prototype
 
-![Personal TRNG Lab Prototype](prototype_in_lab.jpg)
+![Personal TRNG Lab Prototype](prototype_in_lab.jpg)<br>
 *Personal TRNG hardware prototype running in the lab.*
 
 ## Hardware & Related Repositories
 
-* **PCB Design & BOM:** [mixoftix/personal_trng_pcb](https://github.com) (Single-Sided & Double-Sided editions)
+* **PCB Design & BOM:** [mixoftix/personal_trng_pcb](https://github.com/mixoftix/personal_trng_pcb) (Single-Sided & Double-Sided editions)
 * **Target MCU:** ATmega328 / ATmega328P (`8 MHz` Internal RC Oscillator)
 * **UART Interface:** `115200 baud` (8-N-1)
 
