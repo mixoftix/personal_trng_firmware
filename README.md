@@ -14,6 +14,12 @@ Standard software random number generators (PRNGs) rely on deterministic algorit
 * **Cryptocurrency Wallets & Seed Phrases:** Generating BIP-39 mnemonic seed phrases and private wallet keys on an air-gapped hardware TRNG eliminates reliance on potentially compromised operating systems, browser RNGs, or backdoored software libraries.
 * **Auditable Physical Entropy:** By combining independent free-running 8 MHz crystal oscillators with hardware flip-flop jitter capture (`INT0`/`INT1`), this device produces true physical randomness you can inspect and verify directly.
 
+### Hybrid Mode & Decent Dice Physics Engine
+
+Beyond standard hardware jitter capture, **Personal TRNG** features a **Hybrid Mode (`HRNG`)** that fuses raw oscillator timing entropy with an embedded 2D rigid-body physics simulation of a dropping die. By feeding physical oscillator noise into dynamic environmental parameters—including restitution, surface friction, adhesion, temperature, humidity, and altitude—the firmware expands the state space into an enormous probability distribution designed to cover the full key-derivation space.
+
+* **Try the Interactive Web Simulator:** Explore the underlying 2D physics entropy model directly in your browser at the [Mixoftix Entropy Lab — Decent Dice Simulator](https://mixoftix.net/workshops/entropy_lab_decent_dice.asp).
+
 ---
 
 ## Hardware Prototype
@@ -57,3 +63,9 @@ To obtain a lifetime personal/operational license, send a one-time payment equiv
 
 ### Proof of License
 After completing your transaction, **save your Transaction Hash (TXID / Tx Hash)** in a safe place. Your confirmed on-chain transaction hash serves as your permanent, verifiable proof of a valid license.
+
+## Disclaimer & Key Derivation Notice
+
+**Personal TRNG** is engineered as a hardware-driven physical entropy generator that blends crystal oscillator timing jitter with a physics-based dice simulation to produce unpredictable raw bitstreams.
+
+For high-stakes cryptographic applications—such as creating cryptocurrency private keys, wallet seeds, or master encryption keys—**treat all device outputs strictly as raw entropy**. Always pass the extracted sequences through a standardized, peer-reviewed Key Derivation Function (such as **BIP-39**, **HKDF**, **PBKDF2**, or **Argon2**) inside a trusted environment to derive valid private keys. Any use of this hardware or firmware for critical security operations is solely at the user's own risk.
